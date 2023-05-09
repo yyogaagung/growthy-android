@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.GrowthyApplication" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/kelly_green</item>
-        <item name="colorPrimaryVariant">@color/kelly_green</item>
+        <item name="colorPrimary">@color/spearmint</item>
+        <item name="colorPrimaryVariant">@color/spearmint</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/seafoam_green</item>
@@ -14,4 +14,6 @@
         <!-- Customize your theme here. -->
 
     </style>
+
+
 </resources>
