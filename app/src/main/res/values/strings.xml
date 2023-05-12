@@ -5,6 +5,12 @@
     <string name="title_dashboard">Diskusi</string>
     <string name="title_notifications">Langganan</string>
     <string name="title_profiles">Profile</string>
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_diagnosa">Diagnosa</string>
+    <string name="txt_detail_diagnosa">Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="btn_penyembuhan">Penyembuhan</string>
+    <string name="btn_kembali">Kembali</string>
+    <string name="txt_penyakit">Penyakit Layu Fusarium</string>
+    <string name="txt_detail_penyakit">Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the 1960s with the release of Letras</string>
 </resources>
