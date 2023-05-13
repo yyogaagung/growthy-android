@@ -13,4 +13,6 @@
     <string name="btn_kembali">Kembali</string>
     <string name="txt_penyakit">Penyakit Layu Fusarium</string>
     <string name="txt_detail_penyakit">Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the 1960s with the release of Letras</string>
+    <string name="text_loading">Kami sedang memproses gambar tanaman Anda</string>
+    <string name="text_funfact">"Fun fact disini "</string>
 </resources>
