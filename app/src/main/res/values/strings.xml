@@ -7,4 +7,5 @@
     <string name="title_profiles">Profile</string>
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_judul_up_foto">Apakah foto Anda sudah sesuai?</string>
 </resources>
