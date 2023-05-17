@@ -2,6 +2,7 @@ package com.yyogadev.growthyapplication
 
 import android.content.Intent
 import android.content.Intent.ACTION_GET_CONTENT
+import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +20,7 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
 import com.yyogadev.growthyapplication.databinding.ActivityCameraBinding
 import com.yyogadev.growthyapplication.databinding.ActivityMainBinding
+import java.io.File
 
 class CameraActivity : AppCompatActivity() {
 
@@ -41,7 +43,6 @@ class CameraActivity : AppCompatActivity() {
         binding.openGallery.setOnClickListener {
             startGallery()
         }
-
     }
 
     private fun startGallery() {
@@ -114,7 +115,6 @@ class CameraActivity : AppCompatActivity() {
         }, ContextCompat.getMainExecutor(this))
     }
 
-
     private fun takePhoto(){
         val imageCapture = imageCapture ?: return
 
@@ -134,7 +134,7 @@ class CameraActivity : AppCompatActivity() {
                 }
 
                 override fun onImageSaved(output: ImageCapture.OutputFileResults) {
-                    val intent = Intent()
+                    val intent = Intent(this@CameraActivity, UploadActivity::class.java)
                     intent.putExtra("picture", photoFile)
                     intent.putExtra(
                         "isBackCamera",
@@ -146,6 +146,4 @@ class CameraActivity : AppCompatActivity() {
             }
         )
     }
-
-
 }

@@ -30,8 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_margin="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/cameraXButton"
-        app:srcCompat="@drawable/ic_place_holder" />
+        app:layout_constraintBottom_toTopOf="@+id/cameraXButton" />
 
     <LinearLayout
         android:layout_width="match_parent"

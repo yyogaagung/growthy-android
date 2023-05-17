@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startFiturCamera() {
-        val intent = Intent(this, UploadActivity::class.java)
+        val intent = Intent(this, CameraActivity::class.java)
         startActivity(intent)
     }
 }
