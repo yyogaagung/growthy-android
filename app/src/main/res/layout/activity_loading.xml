@@ -32,19 +32,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logomin" />
 
-    <TextView
-        android:id="@+id/textFunFact"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="28dp"
-        android:gravity="center_horizontal"
-        android:text="@string/text_funfact"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="534dp"
-        tools:ignore="MissingConstraints" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
