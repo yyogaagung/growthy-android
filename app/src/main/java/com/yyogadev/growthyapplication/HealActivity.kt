@@ -13,12 +13,12 @@ class HealActivity : AppCompatActivity() {
         binding = ActivityHealBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnKembali.setOnClickListener {
-            kembali()
-        }
-        binding.arrowBack.setOnClickListener {
-            kembali()
-        }
+//        binding.btnKembali.setOnClickListener {
+//            kembali()
+//        }
+//        binding.arrowBack.setOnClickListener {
+//            kembali()
+//        }
     }
 
     private fun kembali() {

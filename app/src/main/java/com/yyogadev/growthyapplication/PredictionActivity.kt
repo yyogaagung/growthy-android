@@ -17,9 +17,6 @@ class PredictionActivity : AppCompatActivity() {
             startFiturPenyembuhan()
         }
 
-        binding.btnKembali.setOnClickListener {
-            kembali()
-        }
     }
 
     private fun startFiturPenyembuhan() {
