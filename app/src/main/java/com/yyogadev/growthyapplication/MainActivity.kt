@@ -20,13 +20,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.fiturCamerabtn.setOnClickListener {
-            startFiturCamera()
-        }
-
-        binding.fiturPrediksibtn.setOnClickListener {
-            startFiturPrediksi()
-        }
+//        binding.fiturCamerabtn.setOnClickListener {
+//            startFiturCamera()
+//        }
+//
+//        binding.fiturPrediksibtn.setOnClickListener {
+//            startFiturPrediksi()
+//        }
 
 
         val navView: BottomNavigationView = binding.navView
@@ -47,14 +47,14 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
     }
 
-    private fun startFiturPrediksi() {
-//        val intent = Intent(this, PredictionActivity::class.java)
+//    private fun startFiturPrediksi() {
+////        val intent = Intent(this, PredictionActivity::class.java)
+////        startActivity(intent)
+//    }
+//
+//    private fun startFiturCamera() {
+//        val intent = Intent(this, UploadActivity::class.java)
 //        startActivity(intent)
-    }
-
-    private fun startFiturCamera() {
-        val intent = Intent(this, UploadActivity::class.java)
-        startActivity(intent)
-    }
+//    }
 
 }

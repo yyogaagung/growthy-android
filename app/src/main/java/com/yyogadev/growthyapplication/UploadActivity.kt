@@ -66,12 +66,13 @@ class UploadActivity : AppCompatActivity() {
         binding.cameraXButton.setOnClickListener { startCameraX() }
 //        binding.cameraButton.setOnClickListener { startTakePhoto() }
         binding.galleryButton.setOnClickListener { startGallery() }
-        //binding.uploadButton.setOnClickListener { uploadImage() }
+        binding.uploadButton.setOnClickListener { uploadImage() }
     }
 
-//    private fun uploadImage() {
-//        TODO("Not yet implemented")
-//    }
+    private fun uploadImage() {
+        val intent = Intent(this, PredictionActivity::class.java)
+        startActivity(intent)
+    }
 //
     private fun startGallery() {
         val intent = Intent()
