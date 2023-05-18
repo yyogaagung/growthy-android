@@ -7,4 +7,28 @@
     <string name="title_profiles">Profile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_diagnosa">Diagnosa</string>
+    <string name="txt_detail_diagnosa">Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="btn_penyembuhan">Penyembuhan</string>
+    <string name="btn_kembali">Kembali</string>
+    <string name="txt_penyakit">Penyakit Layu Fusarium</string>
+    <string name="txt_detail_penyakit">Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the 1960s with the release of Letras</string>
+    <string name="text_loading">Kami sedang memproses gambar tanaman Anda</string>
+    <string name="text_funfact">"Fun fact disini "</string>
+    <string name="txt_hasilprediksi">Silahkan periksa apakah nama penyakit ini sesuai dengan kerusakan pada tanaman Anda</string>
+    <string name="txt_nama_penyakit">Bintik Hitam (Blank Spot)</string>
+    <string name="txt_ringkasan_penyakit">- Bintik-bintik kecil disisi atas daun yang dikelilingi oleh lingkaran kuning.\n- Gugurnya daun sebelum waktunya.</string>
+    <string name="txt_nama_ilmiah">Nama ilmiah: Diplocarpon rosae</string>
+    <string name="txt_jdl_info_umum">Informasi Umum</string>
+    <string name="txt_isi_info_umum">Diplocarpon rosae adalah jamur yang menyebabkan penyakit bercak hitam mawar. Tahap aseksual sekarang dikenal sebagai Marssonina rosae , sedangkan tahap seksual dan paling umum dikenal sebagai Diplocarpon rosae.</string>
+    <string name="txt_jdl_info_gejala">Informasi Gejala</string>
+    <string name="txt_isi_info_gejala">"Gejalanya berupa bintik-bintik kecil disisi atas daun. Bercak keunguan atau hitam ini dapat membesar dengan cepat dari 2 hingga 12 mm dan menunjukkan batas yang menyebar. Area daun disekitarnya dapat menguning dan gugur sebelum waktunya. "</string>
+    <string name="txt_jdl_penyebab">Penyebab</string>
+    <string name="txt_isi_penyebab">Bintik hitam pada bunga mawar disebabkan oleh jamur Diplocarpon rosae. Jamur cenderung bertahan melewati musim dingin pada daun dan batang yang jatuh dan membusuk.</string>
+    <string name="txt_jdl_pencegahan">Tindakan Pencegahan</string>
+    <string name="txt_isi_pencegahan">Taktik terbaik untuk mencegah bercak hitam adalah menanam mawar di tempat tumbuh yang bagus untuk tanaman, tetapi tidak untuk jamur.</string>
+    <string name="txt_jdl_pengobatan">Cara Pengobatan</string>
+    <string name="txt_isi_pengobatan">berikut cara pengobatan</string>
+    <string name="txt_jdl_penemuan">Dapat ditemukan pada tanaman</string>
+    <string name="txt_isi_penemuan">Mawar</string>
 </resources>
