@@ -7,9 +7,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.yyogadev.growthyapplication.R
 import com.yyogadev.growthyapplication.databinding.FragmentProfileBinding
 
-class ProfileFragment : Fragment() {
+class ProfileFragment : Fragment(),View.OnClickListener {
 
     private var _binding: FragmentProfileBinding?= null
 
@@ -28,11 +29,24 @@ class ProfileFragment : Fragment() {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textProfile
-        profileViewModel.text.observe(viewLifecycleOwner) {text ->
-            textView.text = text
-        }
+//        val textView: TextView = binding.textProfile
+//        profileViewModel.text.observe(viewLifecycleOwner) {text ->
+//            textView.text = text
+//        }
+        binding.toEdtProfile.setOnClickListener(this)
         return root
+    }
+
+    override fun onClick(v: View) {
+        if (v.id == R.id.toEdtProfile) {
+            val editProfileFragment = EditProfileFragment()
+            val fragmentManager = parentFragmentManager
+            fragmentManager.beginTransaction().apply {
+                replace(R.id.nav_host_fragment_activity_main, editProfileFragment, EditProfileFragment::class.java.simpleName)
+                addToBackStack(null)
+                commit()
+            }
+        }
     }
 
     override fun onDestroyView() {
