@@ -7,6 +7,7 @@
     <string name="title_profiles">Profile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_judul_up_foto">Ambil foto atau pilih gambar dari galeri</string>
     <string name="txt_diagnosa">Diagnosa</string>
     <string name="txt_detail_diagnosa">Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
     <string name="btn_penyembuhan">Penyembuhan</string>
