@@ -12,7 +12,7 @@
         android:id="@+id/logo"
         android:layout_width="300dp"
         android:layout_height="170dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_gravity="center_horizontal"
         app:srcCompat="@drawable/logomin" />
 
@@ -30,7 +30,8 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_margin="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/cameraXButton" />
+        app:layout_constraintBottom_toTopOf="@+id/cameraXButton"
+        android:src="@drawable/ic_place_holder"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,10 +51,10 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/uploadButton"
+            android:id="@+id/galleryButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Kirim"
+            android:text="Buka Galeri"
             android:layout_marginStart="50dp"
             android:layout_marginEnd="30dp"
             android:textColor="@color/black"
@@ -62,5 +63,18 @@
             app:layout_constraintStart_toStartOf="parent" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/uploadButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kirim"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </LinearLayout>

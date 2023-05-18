@@ -40,30 +40,30 @@ class CameraActivity : AppCompatActivity() {
             else CameraSelector.DEFAULT_BACK_CAMERA
             startCamera()
         }
-        binding.openGallery.setOnClickListener {
-            startGallery()
-        }
+//        binding.openGallery.setOnClickListener {
+//            startGallery()
+//        }
     }
 
-    private fun startGallery() {
-        val intent = Intent()
-        intent.action = ACTION_GET_CONTENT
-        intent.type = "image/*"
-        val chooser = Intent.createChooser(intent, "Choose a Picture")
-        launcherIntentGallery.launch(chooser)
-    }
-
-    private val launcherIntentGallery = registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()
-    ) {
-            result ->
-        if (result.resultCode == RESULT_OK) {
-            val selectedImg = result.data?.data as Uri
-            selectedImg.let { uri ->
-                val myFile = uriToFile(uri, this@CameraActivity)
-            }
-        }
-    }
+//    private fun startGallery() {
+//        val intent = Intent()
+//        intent.action = ACTION_GET_CONTENT
+//        intent.type = "image/*"
+//        val chooser = Intent.createChooser(intent, "Choose a Picture")
+//        launcherIntentGallery.launch(chooser)
+//    }
+//
+//    private val launcherIntentGallery = registerForActivityResult(
+//        ActivityResultContracts.StartActivityForResult()
+//    ) {
+//            result ->
+//        if (result.resultCode == RESULT_OK) {
+//            val selectedImg = result.data?.data as Uri
+//            selectedImg.let { uri ->
+//                val myFile = uriToFile(uri, this@CameraActivity)
+//            }
+//        }
+//    }
 
     override fun onResume() {
         super.onResume()
@@ -134,7 +134,7 @@ class CameraActivity : AppCompatActivity() {
                 }
 
                 override fun onImageSaved(output: ImageCapture.OutputFileResults) {
-                    val intent = Intent(this@CameraActivity, UploadActivity::class.java)
+                    val intent = Intent()
                     intent.putExtra("picture", photoFile)
                     intent.putExtra(
                         "isBackCamera",

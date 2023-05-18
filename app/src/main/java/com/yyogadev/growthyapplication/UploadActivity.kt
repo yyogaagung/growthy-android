@@ -1,8 +1,10 @@
 package com.yyogadev.growthyapplication
 
 import android.content.Intent
+import android.content.Intent.ACTION_GET_CONTENT
 import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
+import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -63,7 +65,7 @@ class UploadActivity : AppCompatActivity() {
 
         binding.cameraXButton.setOnClickListener { startCameraX() }
 //        binding.cameraButton.setOnClickListener { startTakePhoto() }
-        // binding.galleryButton.setOnClickListener { startGallery() }
+        binding.galleryButton.setOnClickListener { startGallery() }
         //binding.uploadButton.setOnClickListener { uploadImage() }
     }
 
@@ -71,13 +73,13 @@ class UploadActivity : AppCompatActivity() {
 //        TODO("Not yet implemented")
 //    }
 //
-//    private fun startGallery() {
-//        val intent = Intent()
-//        intent.action = ACTION_GET_CONTENT
-//        intent.type = "image/*"
-//        val chooser = Intent.createChooser(intent, "Choose a Picture")
-//        launcherIntentGallery.launch(chooser)
-//    }
+    private fun startGallery() {
+        val intent = Intent()
+        intent.action = ACTION_GET_CONTENT
+        intent.type = "image/*"
+        val chooser = Intent.createChooser(intent, "Choose a Picture")
+        launcherIntentGallery.launch(chooser)
+    }
 //
 //    private fun startTakePhoto() {
 //        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
@@ -109,18 +111,18 @@ class UploadActivity : AppCompatActivity() {
         }
     }
 
-//    private val launcherIntentGallery = registerForActivityResult(
-//        ActivityResultContracts.StartActivityForResult()
-//    ) {
-//        result ->
-//        if (result.resultCode == RESULT_OK) {
-//            val selectedImg = result.data?.data as Uri
-//            selectedImg.let { uri ->
-//                val myFile = uriToFile(uri, this@MainActivity)
-//                binding.previewImageView.setImageURI(uri)
-//            }
-//        }
-//    }
+    private val launcherIntentGallery = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) {
+        result ->
+        if (result.resultCode == RESULT_OK) {
+            val selectedImg = result.data?.data as Uri
+            selectedImg.let { uri ->
+                val myFile = uriToFile(uri, this@UploadActivity)
+                binding.previewImageView.setImageURI(uri)
+            }
+        }
+    }
 
     private lateinit var currentPhotoPath: String
     private val launcherIntentCamera = registerForActivityResult(
