@@ -14,7 +14,7 @@
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="25dp"
+        android:padding="35dp"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
         app:cardElevation="5dp"
@@ -105,6 +105,7 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -124,10 +125,10 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.754">
+                app:layout_constraintVertical_bias="0.809">
 
                 <LinearLayout
-                    android:id="@+id/fitur1"
+                    android:id="@+id/btnDeteksi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -136,33 +137,33 @@
                     android:padding="20dp">
 
 
-                    <de.hdodenhof.circleimageview.CircleImageView
+                    <ImageView
                         android:id="@+id/fiturImg1"
                         android:layout_width="63dp"
-                        android:layout_height="74dp"
+                        android:layout_height="122dp"
                         android:layout_centerVertical="true"
                         android:layout_gravity="center"
                         android:layout_marginStart="5dp"
-                        android:src="@drawable/google"
-                        tools:src="@tools:sample/avatars" />
+                        android:src="@drawable/deteksi_penyakit"
+                        tools:src="@drawable/deteksi_penyakit" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:fontFamily="@font/opensans_bold"
-                        android:text="Tanaman Hias"
-                        android:textAlignment="center"
+                        android:text="Deteksi Penyakit"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
                         android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:fontFamily="@font/opensans_regular"
-                        android:text="ini sdjn kasnds asdb"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
+                        android:text="Porter tanaman yang bermasalah"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -171,6 +172,7 @@
                     android:layout_weight="0.8" />
 
                 <LinearLayout
+                    android:id="@+id/btnKeuangan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -178,29 +180,34 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-                    <de.hdodenhof.circleimageview.CircleImageView
+                    <ImageView
                         android:id="@+id/fiturImg2"
                         android:layout_width="63dp"
-                        android:layout_height="74dp"
+                        android:layout_height="122dp"
                         android:layout_below="@id/tv_suhu"
                         android:layout_centerVertical="true"
+                        android:layout_gravity="center"
                         android:layout_marginStart="5dp"
-                        android:src="@drawable/google"
-                        tools:src="@tools:sample/avatars" />
+                        android:src="@drawable/financial_dashboard"
+                        tools:src="@drawable/financial_dashboard" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/opensans_bold"
-                        android:text="Tanaman Hias"
+                        android:text="Catatan Keuangan"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
                         android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/opensans_regular"
-                        android:text="ini sdjn kasnds asdb"
-                        android:textSize="12sp" />
+                        android:text="Jejak Pemansukan dan Pengeluaran "
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -214,10 +221,10 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.208">
+                app:layout_constraintVertical_bias="0.053">
 
                 <LinearLayout
-                    android:id="@+id/fitur2"
+                    android:id="@+id/btnTanamanHias"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -226,33 +233,34 @@
                     android:padding="20dp">
 
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/fiturImg3"
+                    <ImageView
+                        android:id="@+id/imgFitur1"
                         android:layout_width="63dp"
-                        android:layout_height="74dp"
+                        android:layout_height="122dp"
+                        android:layout_below="@id/tv_suhu"
                         android:layout_centerVertical="true"
                         android:layout_gravity="center"
                         android:layout_marginStart="5dp"
-                        android:src="@drawable/google"
-                        tools:src="@tools:sample/avatars" />
+                        android:src="@drawable/informasi_tanaman"
+                        tools:src="@drawable/informasi_tanaman" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:fontFamily="@font/opensans_bold"
                         android:text="Tanaman Hias"
-                        android:textAlignment="center"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
                         android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:fontFamily="@font/opensans_regular"
-                        android:text="ini sdjn kasnds asdb"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
+                        android:text="Informasi tanaman dan cara budidaya"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -261,6 +269,7 @@
                     android:layout_weight="0.8" />
 
                 <LinearLayout
+                    android:id="@+id/btnHama"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -268,29 +277,34 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-                    <de.hdodenhof.circleimageview.CircleImageView
+                    <ImageView
                         android:id="@+id/fiturImg4"
                         android:layout_width="63dp"
-                        android:layout_height="74dp"
+                        android:layout_height="122dp"
                         android:layout_below="@id/tv_suhu"
                         android:layout_centerVertical="true"
+                        android:layout_gravity="center"
                         android:layout_marginStart="5dp"
-                        android:src="@drawable/google"
-                        tools:src="@tools:sample/avatars" />
+                        android:src="@drawable/hama_dan_penyakit"
+                        tools:src="@drawable/hama_dan_penyakit" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/opensans_bold"
-                        android:text="Tanaman Hias"
+                        android:text="Hama dan Penyakit"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
                         android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/opensans_regular"
-                        android:text="ini sdjn kasnds asdb"
-                        android:textSize="12sp" />
+                        android:text="Penyebab dan cara penyembuhan"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"  />
                 </LinearLayout>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
