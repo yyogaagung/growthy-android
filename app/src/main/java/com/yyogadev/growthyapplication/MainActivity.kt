@@ -47,6 +47,7 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
     }
 
+
     private fun startFiturPrediksi() {
         val intent = Intent(this, PredictionActivity::class.java)
         startActivity(intent)
@@ -56,4 +57,5 @@ class MainActivity : AppCompatActivity() {
 //        val intent = Intent(this, UploadActivity::class.java)
 //        startActivity(intent)
     }
+
 }
