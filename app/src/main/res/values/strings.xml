@@ -5,6 +5,25 @@
     <string name="title_dashboard">Diskusi</string>
     <string name="title_notifications">Langganan</string>
     <string name="title_profiles">Profile</string>
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_hint">Cari tanaman hias</string>
+    <string name="camera_search">Cari dengan Foto</string>
+    <string name="txt_judul_tradisional">Nama tradisional : </string>
+    <string name="txt_nama_tradisional">Kaktus Rambut Nenek</string>
+    <string name="txt_judul_latin">Nama latin : </string>
+    <string name="txt_nama_latin">Mammillaria hahniana</string>
+    <string name="txt_judul_keluarga">Keluarga  : </string>
+    <string name="txt_nama_keluarga">Cactaceae</string>
+    <string name="txt_plant_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien diam, pulvinar ac ex ut,</string>
+    <string name="txt_judul_harga">Harga rata - rata di pasaran </string>
+    <string name="txt_harga">Rp200.000 per tanaman</string>
+    <string name="txt_judul_kesulitan">Tingkat kesulitan dalam merawat</string>
+    <string name="txt_kesulitan">Mudah</string>
+    <string name="txt_judul_pil_bibit">Cara memilih bibit dan tanaman yang bagus</string>
+    <string name="txt_pilih_bibit">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien diam, pulvinar ac ex ut</string>
+    <string name="txt_judul_cara_tanam">Cara Menanam</string>
+    <string name="txt_judul_lokasi">Lokasi Optimal</string>
+    <string name="txt_judul_penyakit_sering">Penyakit yang sering menjangkit</string>
+    <string name="txt_judul_tindak_pencegahan">Tindakan pencegahan penyakit</string>
 </resources>

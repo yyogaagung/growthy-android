@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/outline_search_24"
+        android:title="@string/search_hint"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always" />
+
+    <group android:menuCategory="container">
+    <item android:id="@+id/cameraSearch"
+        android:title="@string/camera_search"
+        android:icon = "@drawable/outline_camera_alt_24"
+        app:showAsAction="always" />
+    </group>
+</menu>
