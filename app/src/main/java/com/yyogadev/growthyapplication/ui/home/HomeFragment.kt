@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.yyogadev.growthyapplication.FinancialActivity
 import com.yyogadev.growthyapplication.UploadActivity
 import com.yyogadev.growthyapplication.databinding.FragmentHomeBinding
 
@@ -34,6 +35,10 @@ class HomeFragment : Fragment() {
             startFiturCamera()
         }
 
+        binding.btnKeuangan.setOnClickListener {
+            startFiturFinancial()
+        }
+
 
         return root
     }
@@ -45,6 +50,11 @@ class HomeFragment : Fragment() {
 
     private fun startFiturCamera() {
         val intent = Intent(requireContext(), UploadActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun startFiturFinancial() {
+        val intent = Intent(requireContext(), FinancialActivity::class.java)
         startActivity(intent)
     }
 
