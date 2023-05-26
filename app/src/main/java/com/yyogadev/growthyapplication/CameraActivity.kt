@@ -20,6 +20,7 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
 import com.yyogadev.growthyapplication.databinding.ActivityCameraBinding
 import com.yyogadev.growthyapplication.databinding.ActivityMainBinding
+import com.yyogadev.growthyapplication.ui.MiniTourActivity
 import java.io.File
 
 class CameraActivity : AppCompatActivity() {
@@ -43,6 +44,11 @@ class CameraActivity : AppCompatActivity() {
 //        binding.openGallery.setOnClickListener {
 //            startGallery()
 //        }
+
+        binding.openGuide.setOnClickListener {
+            intent = Intent(this@CameraActivity, MiniTourActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 //    private fun startGallery() {

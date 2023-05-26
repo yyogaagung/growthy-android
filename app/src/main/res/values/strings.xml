@@ -32,4 +32,7 @@
     <string name="txt_isi_pengobatan">berikut cara pengobatan</string>
     <string name="txt_jdl_penemuan">Dapat ditemukan pada tanaman</string>
     <string name="txt_isi_penemuan">Mawar</string>
+    <string name="txtMini1">Tips Pengambilan Foto</string>
+    <string name="txtMini2">Tips Pengambilan Foto</string>
+    <string name="txtMini3">Tips Pengambilan Foto</string>
 </resources>
