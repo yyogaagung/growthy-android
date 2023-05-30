@@ -16,12 +16,7 @@ import androidx.core.content.ContextCompat
 import com.yyogadev.growthyapplication.R
 import com.yyogadev.growthyapplication.createFile
 import com.yyogadev.growthyapplication.databinding.ActivityCameraBinding
-<<<<<<< HEAD:app/src/main/java/com/yyogadev/growthyapplication/CameraActivity.kt
-import com.yyogadev.growthyapplication.databinding.ActivityMainBinding
 import com.yyogadev.growthyapplication.ui.MiniTourActivity
-import java.io.File
-=======
->>>>>>> development:app/src/main/java/com/yyogadev/growthyapplication/ui/home/deteksi/CameraActivity.kt
 
 class CameraActivity : AppCompatActivity() {
 

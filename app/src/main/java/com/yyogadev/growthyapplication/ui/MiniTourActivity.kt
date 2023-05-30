@@ -11,10 +11,10 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.viewpager.widget.ViewPager
-import com.yyogadev.growthyapplication.CameraActivity
 import com.yyogadev.growthyapplication.R
 import com.yyogadev.growthyapplication.ViewPagerAdapter
 import com.yyogadev.growthyapplication.databinding.ActivityMiniTourBinding
+import com.yyogadev.growthyapplication.ui.home.deteksi.CameraActivity
 
 class MiniTourActivity : AppCompatActivity() {
 
