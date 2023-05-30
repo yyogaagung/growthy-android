@@ -1,19 +1,21 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Base application theme -->
     <style name="Theme.GrowthyApplication" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
+        <!-- Primary brand color -->
         <item name="colorPrimary">@color/spearmint</item>
         <item name="colorPrimaryVariant">@color/spearmint</item>
         <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
+        <!-- Secondary brand color -->
         <item name="colorSecondary">@color/seafoam_green</item>
         <item name="colorSecondaryVariant">@color/seafoam_green</item>
         <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">@color/spearmint</item>
+        <!-- Customize your theme here -->
 
     </style>
 
-
+    <style name="Theme.GrowthyApplication.BackgroundImageStyle" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_financial</item>
+    </style>
 </resources>

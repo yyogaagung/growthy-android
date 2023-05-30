@@ -1,13 +1,13 @@
-package com.yyogadev.growthyapplication.ui.notifications
+package com.yyogadev.growthyapplication.ui.diskusi
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class DiskusiViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "Fitur Diskusi akan segera tiba! Nantikan ya!"
     }
     val text: LiveData<String> = _text
 }
