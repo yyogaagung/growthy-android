@@ -13,15 +13,15 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.yyogadev.growthyapplication.ui.dashboard.DashboardFragment"
+        android:name="com.yyogadev.growthyapplication.ui.diskusi.DiskusiFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_diskusi" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.yyogadev.growthyapplication.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:name="com.yyogadev.growthyapplication.ui.kebun.KebunFragment"
+        android:label="Kebun Sendiri"
+        tools:layout="@layout/fragment_kebun" />
 
     <fragment
         android:id="@+id/navigation_profile"

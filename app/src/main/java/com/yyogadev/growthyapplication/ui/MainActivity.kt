@@ -1,18 +1,27 @@
-package com.yyogadev.growthyapplication
+package com.yyogadev.growthyapplication.ui
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.yyogadev.growthyapplication.R
 import com.yyogadev.growthyapplication.databinding.ActivityMainBinding
+import com.yyogadev.growthyapplication.ui.login.LoginActivity
 
+private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var tokenViewModel: TokenViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,14 +29,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.fiturCamerabtn.setOnClickListener {
-            startFiturCamera()
-        }
-
-        binding.fiturPrediksibtn.setOnClickListener {
-            startFiturPrediksi()
-        }
-
+        checkToken()
 
         val navView: BottomNavigationView = binding.navView
 
@@ -47,14 +49,22 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
     }
 
-    private fun startFiturPrediksi() {
-//        val intent = Intent(this, PredictionActivity::class.java)
-//        startActivity(intent)
-    }
+    fun checkToken(){
+        val pref = SettingPreferences.getInstance(dataStore)
 
-    private fun startFiturCamera() {
-        val intent = Intent(this, UploadActivity::class.java)
-        startActivity(intent)
+        tokenViewModel = ViewModelProvider(this, TokenViewModelFactory(pref)).get(
+            TokenViewModel::class.java
+        )
+
+        tokenViewModel.getToken().observe(this) { token: String->
+            if (token.isEmpty()) {
+                val i = Intent(this@MainActivity, LoginActivity::class.java)
+                startActivity(i)
+            }else{
+
+
+            }
+        }
     }
 
 }

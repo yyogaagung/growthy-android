@@ -1,4 +1,4 @@
-package com.yyogadev.growthyapplication.ui.notifications
+package com.yyogadev.growthyapplication.ui.diskusi
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.yyogadev.growthyapplication.databinding.FragmentNotificationsBinding
+import com.yyogadev.growthyapplication.databinding.FragmentDiskusiBinding
 
-class NotificationsFragment : Fragment() {
+class DiskusiFragment : Fragment() {
 
-    private var _binding: FragmentNotificationsBinding? = null
+    private var _binding: FragmentDiskusiBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +22,14 @@ class NotificationsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
+        val diskusiViewModel =
+            ViewModelProvider(this).get(DiskusiViewModel::class.java)
 
-        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        _binding = FragmentDiskusiBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textDashboard
+        diskusiViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

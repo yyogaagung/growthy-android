@@ -1,4 +1,4 @@
-package com.yyogadev.growthyapplication
+package com.yyogadev.growthyapplication.ui.home.deteksi
 
 import android.content.Intent
 import android.content.Intent.ACTION_GET_CONTENT
@@ -12,8 +12,10 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.yyogadev.growthyapplication.databinding.ActivityMainBinding
+import com.yyogadev.growthyapplication.R
 import com.yyogadev.growthyapplication.databinding.ActivityUploadBinding
+import com.yyogadev.growthyapplication.rotateFile
+import com.yyogadev.growthyapplication.uriToFile
 import java.io.File
 
 class UploadActivity : AppCompatActivity() {
@@ -66,12 +68,13 @@ class UploadActivity : AppCompatActivity() {
         binding.cameraXButton.setOnClickListener { startCameraX() }
 //        binding.cameraButton.setOnClickListener { startTakePhoto() }
         binding.galleryButton.setOnClickListener { startGallery() }
-        //binding.uploadButton.setOnClickListener { uploadImage() }
+        binding.uploadButton.setOnClickListener { uploadImage() }
     }
 
-//    private fun uploadImage() {
-//        TODO("Not yet implemented")
-//    }
+    private fun uploadImage() {
+        val intent = Intent(this, PredictionActivity::class.java)
+        startActivity(intent)
+    }
 //
     private fun startGallery() {
         val intent = Intent()

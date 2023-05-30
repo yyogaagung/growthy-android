@@ -1,27 +1,27 @@
-package com.yyogadev.growthyapplication
+package com.yyogadev.growthyapplication.ui.home.deteksi
 
 import android.content.Intent
-import android.content.Intent.ACTION_GET_CONTENT
-import android.graphics.BitmapFactory
-import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageCapture
 import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
+import com.yyogadev.growthyapplication.R
+import com.yyogadev.growthyapplication.createFile
 import com.yyogadev.growthyapplication.databinding.ActivityCameraBinding
+<<<<<<< HEAD:app/src/main/java/com/yyogadev/growthyapplication/CameraActivity.kt
 import com.yyogadev.growthyapplication.databinding.ActivityMainBinding
 import com.yyogadev.growthyapplication.ui.MiniTourActivity
 import java.io.File
+=======
+>>>>>>> development:app/src/main/java/com/yyogadev/growthyapplication/ui/home/deteksi/CameraActivity.kt
 
 class CameraActivity : AppCompatActivity() {
 

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-feature android:name="android.hardware.camera" />
 
     <uses-permission android:name="android.permission.CAMERA" />
@@ -23,26 +25,30 @@
             android:name=".ui.MiniTourActivity"
             android:exported="false" />
         <activity
-            android:name=".LoadingActivity"
+            android:name=".ui.home.financial.PengeluaranAddUpdateActivity"
             android:exported="false" />
         <activity
-            android:name=".HealActivity"
+            android:name=".ui.home.financial.PemasukanAddUpdateActivity"
             android:exported="false" />
         <activity
-            android:name=".PredictionActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".ui.home.financial.FinancialActivity"
             android:exported="false"
-            android:label="@string/title_activity_main"></activity>
-        <activity
-            android:name=".CameraActivity"
-            android:exported="false">
+            android:theme="@style/Theme.GrowthyApplication.BackgroundImageStyle">
 
         </activity>
         <activity
-            android:name=".UploadActivity"
-            android:exported="true">
+            android:name=".ui.home.deteksi.LoadingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.deteksi.HealActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.deteksi.PredictionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -50,10 +56,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegisterActivity"
+            android:name=".ui.home.deteksi.CameraActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.home.deteksi.UploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.register.RegisterActivity"
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".ui.login.LoginActivity"
             android:exported="false" />
     </application>
 
