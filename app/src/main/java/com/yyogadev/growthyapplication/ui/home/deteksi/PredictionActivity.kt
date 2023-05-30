@@ -1,9 +1,10 @@
-package com.yyogadev.growthyapplication
+package com.yyogadev.growthyapplication.ui.home.deteksi
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.yyogadev.growthyapplication.databinding.ActivityPredictionBinding
+import com.yyogadev.growthyapplication.ui.MainActivity
 
 class PredictionActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPredictionBinding

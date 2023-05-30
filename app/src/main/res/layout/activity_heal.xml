@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:background="@drawable/bg_financial"
-    tools:context=".FinancialActivity">
+    tools:context=".ui.home.financial.FinancialActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -32,4 +32,17 @@
     <string name="txt_isi_pengobatan">berikut cara pengobatan</string>
     <string name="txt_jdl_penemuan">Dapat ditemukan pada tanaman</string>
     <string name="txt_isi_penemuan">Mawar</string>
+
+<!--    Resource string for register page-->
+    <string name="input_email">Masukan alamat email anda</string>
+    <string name="hint_email">example@gmail.com</string>
+    <string name="input_password">Masukan password anda</string>
+    <string name="hint_password">Minimal 8 karakter</string>
+    <string name="input_name">Masukan nama anda</string>
+    <string name="hint_neme">Masukan nama anda</string>
+    <string name="txt_daftar">Daftar</string>
+    <string name="text_login">Masuk</string>
+    <string name="atau">Atau</string>
+    <string name="daftar_google">Daftar Dengan Google</string>
+    <string name="sudah_punya_akun">Anda sudah punya Akun? </string>
 </resources>
