@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.yyogadev.growthyapplication.ui.kebun.KebunFragment"
-        android:label="@string/title_notifications"
+        android:label="Kebun Sendiri"
         tools:layout="@layout/fragment_kebun" />
 
     <fragment

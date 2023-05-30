@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class KebunViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-            value = "Fitur Kebun Sendiri akan segera datang"
+            value = "Fitur Kebun Pribadi akan segera tiba! Nantikan ya!"
     }
     val text: LiveData<String> = _text
 }

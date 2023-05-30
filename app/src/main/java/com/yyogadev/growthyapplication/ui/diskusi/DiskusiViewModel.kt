@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class DiskusiViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "Fitur Diskusi akan segera datang"
+        value = "Fitur Diskusi akan segera tiba! Nantikan ya!"
     }
     val text: LiveData<String> = _text
 }
