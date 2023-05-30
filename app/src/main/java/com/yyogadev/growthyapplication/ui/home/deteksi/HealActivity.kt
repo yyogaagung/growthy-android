@@ -1,4 +1,4 @@
-package com.yyogadev.growthyapplication
+package com.yyogadev.growthyapplication.ui.home.deteksi
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

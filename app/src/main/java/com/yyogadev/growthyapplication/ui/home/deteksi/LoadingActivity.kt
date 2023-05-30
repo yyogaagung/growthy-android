@@ -1,4 +1,4 @@
-package com.yyogadev.growthyapplication
+package com.yyogadev.growthyapplication.ui.home.deteksi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

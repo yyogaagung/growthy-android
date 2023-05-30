@@ -1,4 +1,4 @@
-package com.yyogadev.growthyapplication
+package com.yyogadev.growthyapplication.ui.home.financial
 
 import android.view.View
 import android.view.ViewGroup
