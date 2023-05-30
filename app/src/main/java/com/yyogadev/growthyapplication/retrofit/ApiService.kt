@@ -11,7 +11,7 @@ import retrofit2.http.*
 interface ApiService {
 
     @FormUrlEncoded
-    @POST("login")
+    @POST("/auth/login")
     fun postLogin(
         @Field("email") email: String,
         @Field("password") password: String
