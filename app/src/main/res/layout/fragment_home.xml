@@ -1,316 +1,310 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
     tools:context=".ui.home.HomeFragment">
 
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/welcomeTxt"
-        android:layout_marginTop="10dp"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="35dp"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardElevation="5dp"
-        app:cardCornerRadius="15dp"
-        app:cardBackgroundColor="@color/white">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="90dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hai, Amanda Azzahra!"
-            android:textColor="#222"
-            android:padding="15dp"
-            android:textAlignment="textStart"
-            android:fontFamily="@font/opensans_bold"/>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/deskripsiSuhu"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/welcomeTxt"
-        android:padding="25dp"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardElevation="5dp"
-        app:cardCornerRadius="20dp"
-        app:cardBackgroundColor="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:padding="20dp">
-            <RelativeLayout
+            android:orientation="vertical"
+            android:layout_margin="16dp">
 
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:layout_weight="2">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tv_place"
-                    android:layout_centerVertical="false"
-                    android:text="Kecamatan Cilodog"
-                    android:textSize="12sp"
-                    android:fontFamily="@font/opensans_medium"
-                    android:textColor="@color/black"/>
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tv_date"
-                    android:layout_centerVertical="true"
-                    android:layout_below="@id/tv_place"
-                    android:text="Selasa, 5 May 2023"
-                    android:textSize="12sp"
-                    android:fontFamily="@font/opensans_medium"
-                    android:textColor="@color/black"/>
+                    android:fontFamily="@font/opensans_bold"
+                    android:text="Hai Yoga Agung"
+                    android:textColor="#595959"
+                    android:textSize="20dp"/>
 
-                <TextView
-                    android:id="@+id/tv_suhu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_date"
-                    android:text="30C"
-                    android:layout_centerVertical="true"
-                    android:fontFamily="@font/opensans_medium"
-                    android:includeFontPadding="false"
-                    android:textColor="@color/black"
-                    android:textSize="24sp"/>
+                <View
+                    android:layout_gravity="center"
+                    android:layout_width="40dp"
+                    android:layout_height="6dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/spearmint"/>
 
 
-
-            </RelativeLayout>
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile_star"
-                android:layout_width="78dp"
-                android:layout_height="match_parent"
-                android:layout_below="@id/tv_suhu"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="5dp"
-                android:src="@drawable/google"
-                tools:src="@tools:sample/avatars" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/deskripsiSuhu">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="3"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.809">
-
-                <LinearLayout
-                    android:id="@+id/btnDeteksi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_form"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-
-                    <ImageView
-                        android:id="@+id/fiturImg1"
-                        android:layout_width="63dp"
-                        android:layout_height="122dp"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="5dp"
-                        android:src="@drawable/deteksi_penyakit"
-                        tools:src="@drawable/deteksi_penyakit" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/opensans_bold"
-                        android:text="Deteksi Penyakit"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/opensans_regular"
-                        android:text="Porter tanaman yang bermasalah"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/black"
-                        android:textSize="10sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.8" />
-
-                <LinearLayout
-                    android:id="@+id/btnKeuangan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_form"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <ImageView
-                        android:id="@+id/fiturImg2"
-                        android:layout_width="63dp"
-                        android:layout_height="122dp"
-                        android:layout_below="@id/tv_suhu"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="5dp"
-                        android:src="@drawable/financial_dashboard"
-                        tools:src="@drawable/financial_dashboard" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/opensans_bold"
-                        android:text="Catatan Keuangan"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/opensans_regular"
-                        android:text="Jejak Pemansukan dan Pengeluaran "
-                        android:textAlignment="textStart"
-                        android:textColor="@color/black"
-                        android:textSize="10sp" />
-                </LinearLayout>
             </LinearLayout>
 
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="10dp"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/white">
+
             <LinearLayout
-                android:id="@+id/linearLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:weightSum="3"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.053">
+                android:padding="15dp"
+                android:orientation="horizontal">
 
                 <LinearLayout
-                    android:id="@+id/btnTanamanHias"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_form"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-
-                    <ImageView
-                        android:id="@+id/imgFitur1"
-                        android:layout_width="63dp"
-                        android:layout_height="122dp"
-                        android:layout_below="@id/tv_suhu"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="5dp"
-                        android:src="@drawable/informasi_tanaman"
-                        tools:src="@drawable/informasi_tanaman" />
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Kecamatan Sidorejo"
+                        android:text="Kecamatan Sidorejo"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/opensans_regular"/>
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="Selasa, 28 Mei 2023"
+                        android:textSize="14dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30C"
+                        android:textSize="32dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/opensans_bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hujan Berawan"
+                        android:textSize="14dp"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="103dp"
+                        android:layout_height="71dp"
+                        android:src="@drawable/cloudy"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="#2094C973"
+                app:cardCornerRadius="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/icon_tanaman_hias"
+                        android:layout_width="80dp"
+                        android:layout_height="156dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/informasi_tanaman" />
+
+                    <TextView
+                        android:id="@+id/judul_tanaman_hias"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/icon_tanaman_hias"
+                        android:layout_alignParentLeft="true"
                         android:fontFamily="@font/opensans_bold"
                         android:text="Tanaman Hias"
-                        android:textAlignment="textStart"
                         android:textColor="@color/black"
-                        android:textSize="12sp" />
+                        android:textSize="14dp" />
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_below="@+id/judul_tanaman_hias"
+                        android:layout_alignParentLeft="true"
                         android:fontFamily="@font/opensans_regular"
-                        android:text="Informasi tanaman dan cara budidaya"
-                        android:textAlignment="textStart"
+                        android:text="Informasi tanaman dan
+cara budidaya"
                         android:textColor="@color/black"
-                        android:textSize="10sp" />
-                </LinearLayout>
+                        android:textSize="14dp" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.8" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
 
-                <LinearLayout
-                    android:id="@+id/btnHama"
-                    android:layout_width="wrap_content"
+            <androidx.cardview.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="#2094C973"
+                app:cardCornerRadius="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <ImageView
+                        android:id="@+id/icon_financial"
+                        android:layout_width="80dp"
+                        android:layout_height="156dp"
+                        android:src="@drawable/hama_dan_penyakit"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/judul_financial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hama &amp; Penyakit"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/opensans_bold"
+                        android:textColor="@color/black"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/icon_financial"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Penyebab dan cara penyembuhan"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/opensans_regular"
+                        android:textColor="@color/black"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/judul_financial"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="#2094C973"
+                app:cardCornerRadius="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_form"
-                    android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="10dp">
 
                     <ImageView
-                        android:id="@+id/fiturImg4"
-                        android:layout_width="63dp"
-                        android:layout_height="122dp"
-                        android:layout_below="@id/tv_suhu"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="5dp"
-                        android:src="@drawable/hama_dan_penyakit"
-                        tools:src="@drawable/hama_dan_penyakit" />
-
+                        android:id="@+id/icon_deteksi"
+                        android:layout_width="80dp"
+                        android:layout_height="156dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/deteksi_penyakit"
+                        />
                     <TextView
-                        android:layout_width="match_parent"
+                        android:id="@+id/judul_deteksi"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="Deteksi Penyakit"
+                        android:textSize="14dp"
                         android:fontFamily="@font/opensans_bold"
-                        android:text="Hama dan Penyakit"
-                        android:textAlignment="textStart"
                         android:textColor="@color/black"
-                        android:textSize="12sp" />
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/icon_deteksi"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Potret tanaman yang
+bermasalah"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/opensans_regular"
+                        android:textColor="@color/black"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/judul_deteksi"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="#2094C973"
+                app:cardCornerRadius="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <ImageView
+                        android:id="@+id/icon_hama"
+                        android:layout_width="80dp"
+                        android:layout_height="156dp"
+                        android:src="@drawable/hama_dan_penyakit"
+                        android:layout_centerHorizontal="true"
+                        />
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:id="@+id/judul_hama"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/opensans_regular"
-                        android:text="Penyebab dan cara penyembuhan"
-                        android:textAlignment="textStart"
+                        android:text="Catatan Keuangan"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/opensans_bold"
                         android:textColor="@color/black"
-                        android:textSize="10sp"  />
-                </LinearLayout>
-            </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/icon_hama"/>
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jejak pengeluaran dan pemasukan"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/opensans_regular"
+                        android:textColor="@color/black"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/judul_hama"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
-
-
-</RelativeLayout>
+    </LinearLayout>
+</ScrollView>
