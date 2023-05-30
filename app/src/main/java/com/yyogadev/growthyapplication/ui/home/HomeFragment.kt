@@ -34,7 +34,7 @@ class HomeFragment : Fragment() {
             startFiturCamera()
         }
 
-        binding.btnKeuangan.setOnClickListener {
+        binding.btnFinancial.setOnClickListener {
             startFiturFinancial()
         }
 
