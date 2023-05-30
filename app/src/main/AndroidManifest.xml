@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-feature android:name="android.hardware.camera" />
 
@@ -11,6 +12,7 @@
     <uses-feature android:name="android.hardware.camera" />
 
     <uses-permission android:name="android.permission.CAMERA" />
+
 
     <application
         android:allowBackup="true"
@@ -21,6 +23,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GrowthyApplication"
         tools:targetApi="31">
+
+
+
+        <activity
+            android:name=".PlantInfomationActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".CultivationActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".PlantSearchActivity"
+            android:exported="true"/>
+
         <activity
             android:name=".ui.MiniTourActivity"
             android:exported="false" />
