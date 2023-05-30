@@ -16,12 +16,20 @@ import androidx.core.content.ContextCompat
 import com.yyogadev.growthyapplication.R
 import com.yyogadev.growthyapplication.createFile
 import com.yyogadev.growthyapplication.databinding.ActivityCameraBinding
+<<<<<<< HEAD:app/src/main/java/com/yyogadev/growthyapplication/CameraActivity.kt
+import com.yyogadev.growthyapplication.databinding.ActivityMainBinding
+import com.yyogadev.growthyapplication.ui.MiniTourActivity
+import java.io.File
+=======
+>>>>>>> development:app/src/main/java/com/yyogadev/growthyapplication/ui/home/deteksi/CameraActivity.kt
 
 class CameraActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCameraBinding
     private var imageCapture: ImageCapture? = null
     private var cameraSelector: CameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
+
+    //coba
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +46,11 @@ class CameraActivity : AppCompatActivity() {
 //        binding.openGallery.setOnClickListener {
 //            startGallery()
 //        }
+
+        binding.openGuide.setOnClickListener {
+            intent = Intent(this@CameraActivity, MiniTourActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 //    private fun startGallery() {

@@ -22,6 +22,9 @@
         android:theme="@style/Theme.GrowthyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".ui.MiniTourActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.home.financial.PengeluaranAddUpdateActivity"
             android:exported="false" />
         <activity

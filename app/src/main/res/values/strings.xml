@@ -32,6 +32,10 @@
     <string name="txt_isi_pengobatan">berikut cara pengobatan</string>
     <string name="txt_jdl_penemuan">Dapat ditemukan pada tanaman</string>
     <string name="txt_isi_penemuan">Mawar</string>
+    <string name="txtMini1">Tips Pengambilan Foto</string>
+    <string name="txtMini2">Tips Pengambilan Foto</string>
+    <string name="txtMini3">Tips Pengambilan Foto</string>
+
 
 <!--    Resource string for register page-->
     <string name="input_email">Masukan alamat email anda</string>
@@ -47,4 +51,5 @@
     <string name="daftar_google">Daftar Dengan Google</string>
     <string name="sudah_punya_akun">Anda sudah punya Akun? </string>
     <string name="belum_punya_akun">Anda belum punya Akun? </string>
+
 </resources>
