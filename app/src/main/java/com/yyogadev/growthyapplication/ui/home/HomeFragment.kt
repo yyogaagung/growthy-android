@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.yyogadev.growthyapplication.PlantSearchActivity
 import com.yyogadev.growthyapplication.ui.home.financial.FinancialActivity
 import com.yyogadev.growthyapplication.ui.home.deteksi.UploadActivity
 import com.yyogadev.growthyapplication.databinding.FragmentHomeBinding
@@ -30,6 +31,10 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        binding.btnTanamanHias.setOnClickListener {
+            startFiturTanamanHias()
+        }
+
         binding.btnDeteksi.setOnClickListener {
             startFiturCamera()
         }
@@ -45,6 +50,11 @@ class HomeFragment : Fragment() {
     private fun startFiturPrediksi() {
 //        val intent = Intent(this, PredictionActivity::class.java)
 //        startActivity(intent)
+    }
+
+    private fun startFiturTanamanHias(){
+        val intent = Intent(requireContext(), PlantSearchActivity::class.java)
+        startActivity(intent)
     }
 
     private fun startFiturCamera() {
