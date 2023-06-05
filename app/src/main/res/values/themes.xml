@@ -16,6 +16,6 @@
     </style>
 
     <style name="Theme.GrowthyApplication.BackgroundImageStyle" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowBackground">@drawable/bg_financial</item>
+        <item name="android:windowBackground">@drawable/bg_financialll</item>
     </style>
 </resources>
