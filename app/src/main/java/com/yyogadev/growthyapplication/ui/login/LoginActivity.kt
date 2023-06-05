@@ -15,10 +15,7 @@ import com.yyogadev.growthyapplication.R
 import com.yyogadev.growthyapplication.databinding.ActivityLoginBinding
 import com.yyogadev.growthyapplication.retrofit.ApiConfig
 import com.yyogadev.growthyapplication.retrofit.response.LoginResponse
-import com.yyogadev.growthyapplication.ui.MainActivity
-import com.yyogadev.growthyapplication.ui.SettingPreferences
-import com.yyogadev.growthyapplication.ui.TokenViewModel
-import com.yyogadev.growthyapplication.ui.TokenViewModelFactory
+import com.yyogadev.growthyapplication.ui.*
 import com.yyogadev.growthyapplication.ui.register.RegisterActivity
 import retrofit2.Call
 import retrofit2.Callback
@@ -36,10 +33,8 @@ class LoginActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-        val pref = SettingPreferences.getInstance(dataStore)
-        tokenViewModel = ViewModelProvider(this, TokenViewModelFactory(pref)).get(
-           TokenViewModel::class.java
-        )
+
+        checkToken()
 
         binding.btnToDaftar.setOnClickListener { onClickToSignUp() }
         binding.btnLogin.setOnClickListener { onClickLogin(
@@ -68,6 +63,7 @@ class LoginActivity : AppCompatActivity() {
                     tokenViewModel.saveToken(responseBody.token)
                     val i = Intent(this@LoginActivity, MainActivity::class.java)
                     startActivity(i)
+                    finish();
                 } else {
                     Toast.makeText(
                         this@LoginActivity,
@@ -83,6 +79,26 @@ class LoginActivity : AppCompatActivity() {
                 Log.e(TAG, "onFailure: ${t.message}")
             }
         })
+    }
+
+    override fun onBackPressed() {
+        // Disable going back to the LoginActivity
+        moveTaskToBack(true)
+    }
+
+    fun checkToken(){
+        val pref = SettingPreferences.getInstance(dataStore)
+
+        tokenViewModel = ViewModelProvider(this, TokenViewModelFactory(pref)).get(
+            TokenViewModel::class.java
+        )
+
+        tokenViewModel.getToken().observe(this) { token: String->
+            if (token.isNotEmpty()) {
+                val i = Intent(this@LoginActivity, MainActivity::class.java)
+                startActivity(i)
+            }
+        }
     }
 
     private fun showLoading(isLoading: Boolean) {

@@ -3,7 +3,6 @@ package com.yyogadev.growthyapplication.ui
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
@@ -13,6 +12,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.yyogadev.growthyapplication.R
 import com.yyogadev.growthyapplication.databinding.ActivityMainBinding
 import com.yyogadev.growthyapplication.ui.login.LoginActivity
@@ -47,6 +47,11 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+    }
+
+    override fun onBackPressed() {
+        // Disable going back to the LoginActivity
+        moveTaskToBack(true)
     }
 
     fun checkToken(){
