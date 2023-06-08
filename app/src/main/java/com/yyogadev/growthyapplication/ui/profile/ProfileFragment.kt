@@ -13,6 +13,7 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.yyogadev.growthyapplication.BriefTourActivity
 import com.yyogadev.growthyapplication.R
 import com.yyogadev.growthyapplication.databinding.FragmentProfileBinding
 import com.yyogadev.growthyapplication.ui.SettingPreferences
@@ -61,7 +62,7 @@ class ProfileFragment : Fragment(),View.OnClickListener {
 
         tokenViewModel.getToken().observe(this) { token: String->
             if (token.isEmpty()) {
-                val i = Intent(this.requireContext(), LoginActivity::class.java)
+                val i = Intent(this.requireContext(), BriefTourActivity::class.java)
                 startActivity(i)
             }
         }

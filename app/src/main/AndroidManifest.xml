@@ -2,17 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-
-
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-feature android:name="android.hardware.camera" />
-
-    <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-feature android:name="android.hardware.camera" />
 
     <uses-permission android:name="android.permission.CAMERA" />
 
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -23,21 +21,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GrowthyApplication"
         tools:targetApi="31">
+        <activity
+            android:name=".BriefTourActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.SplashScreenActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait">
 
-
+        </activity>
         <activity
             android:name=".PlantInfomationActivity"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".CultivationActivity"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".PlantSearchActivity"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".ui.MiniTourActivity"
             android:exported="false" />
@@ -50,9 +58,7 @@
         <activity
             android:name=".ui.home.financial.FinancialActivity"
             android:exported="false"
-            android:theme="@style/Theme.GrowthyApplication.BackgroundImageStyle">
-
-        </activity>
+            android:theme="@style/Theme.GrowthyApplication.BackgroundImageStyle" />
         <activity
             android:name=".ui.home.deteksi.LoadingActivity"
             android:exported="false" />
@@ -64,14 +70,7 @@
             android:exported="false" />
         <activity
             android:name=".ui.MainActivity"
-            android:exported="true"
-            android:label="@string/title_activity_main">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".ui.home.deteksi.CameraActivity"
             android:exported="false" />
@@ -80,9 +79,7 @@
             android:exported="false" />
         <activity
             android:name=".ui.register.RegisterActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".ui.login.LoginActivity"
             android:exported="false" />

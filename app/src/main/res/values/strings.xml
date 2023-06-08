@@ -75,7 +75,7 @@
     <string name="add">Tambah</string>
     <string name="save">Simpan</string>
 
-<!--    Resource string for register page-->
+    <!--    Resource string for register page-->
     <string name="input_email">Masukan alamat email anda</string>
     <string name="hint_email">example@gmail.com</string>
     <string name="input_password">Masukan password anda</string>
