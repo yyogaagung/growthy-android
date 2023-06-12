@@ -73,5 +73,10 @@ dependencies {
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
+    implementation 'com.auth0.android:jwtdecode:2.0.2'
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+
 
 }

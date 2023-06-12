@@ -1,6 +1,8 @@
 package com.yyogadev.growthyapplication.retrofit
 
 import com.yyogadev.growthyapplication.retrofit.response.*
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -52,6 +54,7 @@ interface ApiService {
 
     ) : Call<EditFinancialResponse>
 
+
     @POST("financial/add_financial")
     fun createPengeluaranFinancial(
         @Body request: CreatePengeluaranRequest
@@ -62,6 +65,22 @@ interface ApiService {
     fun createPemasukanFinancial(
         @Body request: CreatePemasukanRequest
     ) : Call<EditFinancialResponse>
+
+    @GET("user/profile/{id}")
+    fun getProfile(@Path("id") id: Int): Call<DetailProfileResponse>
+
+
+    @Multipart
+    @PUT("user/edit_profile/{id}")
+    fun updateUser(
+        @Path("id") id: Int?,
+        @Part("name") description: RequestBody,
+        @Part("email") email: RequestBody,
+        @Part("address") address: RequestBody,
+        @Part("phone") type:RequestBody,
+        @Part file: MultipartBody.Part?
+    ) : Call<EditFinancialResponse>
+
 //    @Multipart
 //    @POST("stories")
 //    fun addStory(

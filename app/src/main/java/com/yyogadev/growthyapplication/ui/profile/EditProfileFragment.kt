@@ -25,6 +25,7 @@ class EditProfileFragment : Fragment(), View.OnClickListener {
         TODO("Not yet implemented")
     }
 
+
 //    override fun onClick(v: View) {
 //        if (v.id == R.id.btn_detail_category) {
 //
