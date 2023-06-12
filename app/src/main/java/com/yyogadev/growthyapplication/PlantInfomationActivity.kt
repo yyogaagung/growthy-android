@@ -8,6 +8,10 @@ import com.yyogadev.growthyapplication.databinding.ActivityPlantInfomationBindin
 class PlantInfomationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPlantInfomationBinding
 
+    companion object {
+        const val EXTRA_NAME = "extra_name"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPlantInfomationBinding.inflate(layoutInflater)

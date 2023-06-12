@@ -42,7 +42,7 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/txt_pilih_bibit"/>
+                    android:text="Pilih bibit/tanaman yang memiliki tubuh yang utuh dan tidak ada tanda-tanda kerusakan atau penyakit. Pastikan tidak ada bercak atau goresan pada tubuh kaktus."/>
 
             </LinearLayout>
 
@@ -79,7 +79,11 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/txt_plant_desc"/>
+                    android:text="1. Pilih pot yang sesuai dengan ukuran kaktus.
+2. Siapkan campuran tanah yang cocok untuk kaktus.\n
+3. Pilih bibit/tanaman yang sehat.\n
+4. Tanam bibit/tanaman di pot dengan campuran tanah, pastikan tidak terlalu dalam atau terlalu rendah.\n
+5. Siram bibit/tanaman secukupnya dan letakkan di lokasi yang terkena sinar matahari penuh atau sedikit teduh."/>
 
             </LinearLayout>
 
@@ -116,7 +120,7 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/txt_plant_desc"/>
+                    android:text="Mammillaria hahniana tumbuh optimal di tempat yang terkena sinar matahari penuh, namun juga dapat tumbuh di tempat yang sedikit teduh. Tanaman ini dapat ditempatkan di luar ruangan di daerah yang kering dan panas atau di dalam ruangan yang terang."/>
 
             </LinearLayout>
 
@@ -153,7 +157,7 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/txt_plant_desc"/>
+                    android:text="Mammillaria hahniana rentan terhadap serangan jamur dan bakteri yang dapat menyebabkan busuk pada batang dan akar kaktus."/>
 
             </LinearLayout>
 
@@ -190,7 +194,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginTop="10dp"
-                    android:text="@string/txt_plant_desc"/>
+                    android:text="Pastikan tanah yang digunakan untuk menanam kaktus cukup gembur dan tidak terlalu lembab. Hindari terlalu banyak menyiram kaktus dan periksa secara berkala untuk menghindari serangan jamur atau bakteri. Jaga kebersihan lingkungan tanaman untuk menghindari serangan serangga."/>
 
             </LinearLayout>
 
