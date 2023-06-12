@@ -29,7 +29,21 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        checkToken()
+        val pref = SettingPreferences.getInstance(dataStore)
+
+        tokenViewModel = ViewModelProvider(this, TokenViewModelFactory(pref)).get(
+            TokenViewModel::class.java
+        )
+
+        tokenViewModel.getToken().observe(this) { token: String->
+            if (token.isEmpty()) {
+                val i = Intent(this@MainActivity, LoginActivity::class.java)
+                startActivity(i)
+            }else{
+
+
+            }
+        }
 
         val navView: BottomNavigationView = binding.navView
 
@@ -54,22 +68,6 @@ class MainActivity : AppCompatActivity() {
         moveTaskToBack(true)
     }
 
-    fun checkToken(){
-        val pref = SettingPreferences.getInstance(dataStore)
 
-        tokenViewModel = ViewModelProvider(this, TokenViewModelFactory(pref)).get(
-            TokenViewModel::class.java
-        )
-
-        tokenViewModel.getToken().observe(this) { token: String->
-            if (token.isEmpty()) {
-                val i = Intent(this@MainActivity, LoginActivity::class.java)
-                startActivity(i)
-            }else{
-
-
-            }
-        }
-    }
 
 }
