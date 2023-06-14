@@ -61,6 +61,7 @@ class LoginActivity : AppCompatActivity() {
 
                 if (response.isSuccessful && responseBody != null) {
                     tokenViewModel.saveToken(responseBody.token)
+                    tokenViewModel.saveName(responseBody.name)
                     val i = Intent(this@LoginActivity, MainActivity::class.java)
                     startActivity(i)
                     finish();
