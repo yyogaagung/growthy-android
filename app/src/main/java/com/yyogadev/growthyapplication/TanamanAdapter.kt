@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.yyogadev.growthyapplication.retrofit.response.DataItem
 import com.yyogadev.growthyapplication.retrofit.response.TanamanItem
 import com.yyogadev.growthyapplication.ui.home.financial.TransaksiAdapter
 
@@ -38,6 +39,17 @@ class TanamanAdapter(private val listTanaman: List<TanamanItem>) : RecyclerView.
         holder.tvName.text = data.localName
         holder.tvNameLatin.text = data.species
 
+        holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listTanaman[holder.adapterPosition]) }
+    }
+
+    interface OnItemClickCallback {
+        fun onItemClicked(description: TanamanItem)
+    }
+
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
     }
 }
 

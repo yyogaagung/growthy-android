@@ -85,6 +85,11 @@ interface ApiService {
     @GET("/plant/plants")
     fun getTanamans(): Call<TanamanResponse>
 
+    @GET("/plant/plants/id/{id}")
+    fun getOneTanaman(@Path("id") id: Int): Call<OneTanamanResponse>
+
+
+
 //    @Multipart
 //    @POST("stories")
 //    fun addStory(
