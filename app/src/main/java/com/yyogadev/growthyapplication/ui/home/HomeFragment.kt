@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.yyogadev.growthyapplication.DiseaseSearchActivity
 import com.yyogadev.growthyapplication.PlantSearchActivity
 import com.yyogadev.growthyapplication.ui.home.financial.FinancialActivity
 import com.yyogadev.growthyapplication.ui.home.deteksi.UploadActivity
@@ -43,8 +44,17 @@ class HomeFragment : Fragment() {
             startFiturFinancial()
         }
 
+        binding.btnHama.setOnClickListener {
+            startFiturHama()
+        }
+
 
         return root
+    }
+
+    private fun startFiturHama() {
+        val intent = Intent(requireContext(), DiseaseSearchActivity::class.java)
+        startActivity(intent)
     }
 
     private fun startFiturPrediksi() {

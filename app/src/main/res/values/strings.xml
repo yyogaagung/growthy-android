@@ -89,5 +89,33 @@
     <string name="daftar_google">Daftar Dengan Google</string>
     <string name="sudah_punya_akun">Anda sudah punya Akun? </string>
     <string name="belum_punya_akun">Anda belum punya Akun? </string>
+    <string name="search_hint2">Cari Data Penyakit</string>
 
+
+    <string-array name="data_nama_tradisional">
+        <item>Gray Mold</item>
+        <item>Powdery Mildew</item>
+        <item>Leaf Scars</item>
+        <item>Downy Mildew</item>
+        <item>Black Spot</item>
+        <item>Rust </item>
+    </string-array>
+
+    <string-array name="data_nama_local">
+        <item> Botrytis Cinerea</item>
+        <item>Sphaerotheca pannosa</item>
+        <item>Leaf Scars</item>
+        <item>Peronosclerospora spp</item>
+        <item>Diplocarpon rosae</item>
+        <item>Puccinia triticina </item>
+    </string-array>
+
+    <string-array name="data_photo">
+        <item>@drawable/graymold</item>
+        <item>@drawable/powdery</item>
+        <item>@drawable/leafscars</item>
+        <item>@drawable/embunbulu1</item>
+        <item>@drawable/blackspot2</item>
+        <item>@drawable/rust</item>
+    </string-array>
 </resources>
