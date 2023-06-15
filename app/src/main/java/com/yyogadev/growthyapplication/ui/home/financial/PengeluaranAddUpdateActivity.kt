@@ -54,24 +54,25 @@ class PengeluaranAddUpdateActivity : AppCompatActivity() {
                 startActivity(i)
             }else{
                 oneFinancialViewModel = ViewModelProvider(this, OneFinancialViewModelFactory(token, intent.getIntExtra(
-                    EXTRA_PENGELUARAN,0)))
+                    EXTRA_PENGELUARAN,-1)))
                     .get(OneFinancialViewModel::class.java)
+
+                oneFinancialViewModel.transaksi.observe(this) {
+                    setTransaksiData(it, token)
+                }
+
 
 //            oneFinancialViewModel.isLoading.observe(this) {
 //                showLoading(it)
 //            }
 
-                oneFinancialViewModel.transaksi.observe(this) {
-                        items -> setTransaksiData(items, token)
-                }
+
 
             }
         }
 
 
     }
-
-
 
     private fun setTransaksiData(data: Data?, token:String) {
         if (data != null) {
@@ -282,12 +283,6 @@ class PengeluaranAddUpdateActivity : AppCompatActivity() {
 
     companion object {
         const val EXTRA_PENGELUARAN = "extra_pengeluaran"
-        const val EXTRA_POSITION = "extra_position"
-        const val RESULT_ADD = 101
-        const val RESULT_UPDATE = 201
-        const val RESULT_DELETE = 301
-        const val ALERT_DIALOG_CLOSE = 10
-        const val ALERT_DIALOG_DELETE = 20
     }
 
 }

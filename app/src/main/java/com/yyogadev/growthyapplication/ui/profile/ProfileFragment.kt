@@ -20,6 +20,7 @@ import com.yyogadev.growthyapplication.retrofit.response.DetailProfileResponse
 import com.yyogadev.growthyapplication.ui.SettingPreferences
 import com.yyogadev.growthyapplication.ui.TokenViewModel
 import com.yyogadev.growthyapplication.ui.TokenViewModelFactory
+import com.yyogadev.growthyapplication.ui.login.LoginActivity
 
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
@@ -129,7 +130,10 @@ class ProfileFragment : Fragment(),View.OnClickListener {
             startActivity(intent)
         }
         if(v.id == R.id.btn_logout){
+            val intent = Intent(requireContext(), LoginActivity::class.java)
+            startActivity(intent)
             tokenViewModel.saveToken("")
+
         }
     }
 

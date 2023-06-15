@@ -18,6 +18,7 @@ import com.yyogadev.growthyapplication.databinding.ActivityEditProfileBinding
 import com.yyogadev.growthyapplication.retrofit.ApiConfig
 import com.yyogadev.growthyapplication.retrofit.response.DetailProfileResponse
 import com.yyogadev.growthyapplication.retrofit.response.EditFinancialResponse
+import com.yyogadev.growthyapplication.ui.MainActivity
 import com.yyogadev.growthyapplication.ui.SettingPreferences
 import com.yyogadev.growthyapplication.ui.TokenViewModel
 import com.yyogadev.growthyapplication.ui.TokenViewModelFactory
@@ -119,8 +120,9 @@ class EditProfileActivity : AppCompatActivity() {
                         val responseBody = response.body()
                         if (responseBody != null) {
                             Toast.makeText(this@EditProfileActivity, responseBody.message, Toast.LENGTH_SHORT).show()
-                            val i = Intent(this@EditProfileActivity, ProfileFragment::class.java)
+                            val i = Intent(this@EditProfileActivity, MainActivity::class.java)
                             startActivity(i)
+
                         }
                     } else {
                         Toast.makeText(this@EditProfileActivity, response.message(), Toast.LENGTH_SHORT).show()

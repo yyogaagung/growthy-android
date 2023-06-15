@@ -26,9 +26,7 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private lateinit var tokenViewModel: TokenViewModel
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+    // This property is only valid between onCreateView and onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -36,18 +34,19 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val pref = SettingPreferences.getInstance(this.requireContext().dataStore)
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        val root: View = binding.root
+
+        val pref = SettingPreferences.getInstance(requireContext().dataStore)
 
         tokenViewModel = ViewModelProvider(this, TokenViewModelFactory(pref)).get(
             TokenViewModel::class.java
         )
 
-        tokenViewModel.getName().observe(this.requireActivity()) { name: String->
-            binding.welcomeText.setText("Welcome " + name.toString())
+        tokenViewModel.getName().observe(viewLifecycleOwner) { name: String? ->
+                binding.welcomeText.text = "Welcome $name"
         }
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
         binding.btnTanamanHias.setOnClickListener {
             startFiturTanamanHias()
@@ -65,9 +64,9 @@ class HomeFragment : Fragment() {
             startFiturHama()
         }
 
-
         return root
     }
+
 
     private fun startFiturHama() {
         val intent = Intent(requireContext(), DiseaseSearchActivity::class.java)
