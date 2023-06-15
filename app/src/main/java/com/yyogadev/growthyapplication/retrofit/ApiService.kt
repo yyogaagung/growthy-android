@@ -81,6 +81,10 @@ interface ApiService {
         @Part file: MultipartBody.Part?
     ) : Call<EditFinancialResponse>
 
+
+    @GET("/plant/plants")
+    fun getTanamans(): Call<TanamanResponse>
+
 //    @Multipart
 //    @POST("stories")
 //    fun addStory(
