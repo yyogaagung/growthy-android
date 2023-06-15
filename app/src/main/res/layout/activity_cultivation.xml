@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -39,10 +39,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
-                    android:layout_marginEnd="50dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/txt_pilih_bibit"/>
+                    android:text="data tidak ada" />
 
             </LinearLayout>
 
@@ -76,11 +76,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
-                    android:layout_marginEnd="50dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/txt_plant_desc"/>
-
+                    android:text="Caladium bicolor dapat ditanam di dalam pot atau di tanah. Pastikan tanah yang digunakan memiliki pH netral atau sedikit asam. Tanaman ini membutuhkan drainase yang baik untuk mencegah kelembaban yang berlebihan"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -113,11 +112,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
-                    android:layout_marginEnd="50dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/txt_plant_desc"/>
-
+                    android:text="tidak ada data"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -150,10 +148,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
-                    android:layout_marginEnd="50dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/txt_plant_desc"/>
+                    android:text="Beberapa penyakit yang mungkin menyerang tanaman Caladium bicolor antara lain busuk akar, layu, dan jamur daun." />
 
             </LinearLayout>
 
@@ -187,10 +185,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginEnd="50dp"
                     android:layout_marginTop="10dp"
-                    android:text="@string/txt_plant_desc"/>
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Untuk mencegah penyakit, pastikan tanaman tidak terlalu basah, terutama pada daun dan akar. Juga, pastikan tanah memiliki drainase yang baik dan hindari penyiraman yang berlebihan." />
 
             </LinearLayout>
 
@@ -198,4 +196,4 @@
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
