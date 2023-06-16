@@ -116,12 +116,13 @@
                 android:layout_weight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="#2094C973"
                 app:cardCornerRadius="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#5C93C973"
+                    android:backgroundTint="#5C93C973"
                     android:padding="10dp">
 
                     <ImageView
@@ -157,47 +158,48 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/btn_hama"
-                android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="240dp"
                 android:layout_margin="5dp"
+                android:layout_weight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="#2094C973"
                 app:cardCornerRadius="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="#5C93C973"
+                    android:backgroundTint="#5C93C973"
                     android:padding="10dp">
+
                     <ImageView
                         android:id="@+id/icon_hama"
                         android:layout_width="80dp"
                         android:layout_height="156dp"
-                        android:src="@drawable/hama_dan_penyakit"
                         android:layout_centerHorizontal="true"
-                        />
+                        android:src="@drawable/hama_dan_penyakit" />
 
                     <TextView
                         android:id="@+id/judul_hama"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hama &amp; Penyakit"
-                        android:textSize="14dp"
-                        android:fontFamily="@font/opensans_bold"
-                        android:textColor="@color/black"
+                        android:layout_below="@+id/icon_hama"
                         android:layout_alignParentLeft="true"
-                        android:layout_below="@+id/icon_hama"/>
+                        android:fontFamily="@font/opensans_bold"
+                        android:text="Hama &amp; Penyakit"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Penyebab dan cara penyembuhan"
-                        android:textSize="14dp"
-                        android:fontFamily="@font/opensans_regular"
-                        android:textColor="@color/black"
+                        android:layout_below="@+id/judul_hama"
                         android:layout_alignParentLeft="true"
-                        android:layout_below="@+id/judul_hama"/>
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="Penyebab dan cara penyembuhan"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
@@ -211,18 +213,19 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/btn_deteksi"
-                android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="240dp"
                 android:layout_margin="5dp"
+                android:layout_weight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="#2094C973"
                 app:cardCornerRadius="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#5C93C973"
+                    android:backgroundTint="#5C93C973"
                     android:padding="10dp">
 
                     <ImageView
@@ -230,75 +233,77 @@
                         android:layout_width="80dp"
                         android:layout_height="156dp"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/deteksi_penyakit"
-                        />
+                        android:src="@drawable/deteksi_penyakit" />
+
                     <TextView
                         android:id="@+id/judul_deteksi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Deteksi Penyakit"
-                        android:textSize="14dp"
-                        android:fontFamily="@font/opensans_bold"
-                        android:textColor="@color/black"
+                        android:layout_below="@+id/icon_deteksi"
                         android:layout_alignParentLeft="true"
-                        android:layout_below="@+id/icon_deteksi"/>
+                        android:fontFamily="@font/opensans_bold"
+                        android:text="Deteksi Penyakit"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_below="@+id/judul_deteksi"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="@font/opensans_regular"
                         android:text="Potret tanaman yang
 bermasalah"
-                        android:textSize="14dp"
-                        android:fontFamily="@font/opensans_regular"
                         android:textColor="@color/black"
-                        android:layout_alignParentLeft="true"
-                        android:layout_below="@+id/judul_deteksi"/>
+                        android:textSize="14dp" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/btn_financial"
-                android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="240dp"
                 android:layout_margin="5dp"
+                android:layout_weight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="#2094C973"
                 app:cardCornerRadius="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="#5C93C973"
+                    android:backgroundTint="#5C93C973"
                     android:padding="10dp">
+
                     <ImageView
                         android:id="@+id/icon_financial"
                         android:layout_width="80dp"
                         android:layout_height="156dp"
-                        android:src="@drawable/financial_dashboard"
                         android:layout_centerHorizontal="true"
-                        />
+                        android:src="@drawable/financial_dashboard" />
 
                     <TextView
                         android:id="@+id/judul_financial"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Catatan Keuangan"
-                        android:textSize="14dp"
-                        android:fontFamily="@font/opensans_bold"
-                        android:textColor="@color/black"
+                        android:layout_below="@+id/icon_financial"
                         android:layout_alignParentLeft="true"
-                        android:layout_below="@+id/icon_financial"/>
+                        android:fontFamily="@font/opensans_bold"
+                        android:text="Catatan Keuangan"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Jejak pengeluaran dan pemasukan"
-                        android:textSize="14dp"
-                        android:fontFamily="@font/opensans_regular"
-                        android:textColor="@color/black"
+                        android:layout_below="@+id/judul_financial"
                         android:layout_alignParentLeft="true"
-                        android:layout_below="@+id/judul_financial"/>
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="Jejak pengeluaran dan pemasukan"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
