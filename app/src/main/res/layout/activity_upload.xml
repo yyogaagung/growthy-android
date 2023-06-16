@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".UploadActivity">
+    tools:context=".ui.home.deteksi.UploadActivity">
 
 
     <ImageView
@@ -30,8 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_margin="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/cameraXButton"
-        android:src="@drawable/ic_place_holder"/>
+        app:layout_constraintBottom_toTopOf="@+id/cameraXButton" />
 
     <LinearLayout
         android:layout_width="match_parent"

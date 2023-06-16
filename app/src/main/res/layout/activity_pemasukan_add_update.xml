@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context=".LoginActivity">
+    tools:context=".ui.login.LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,46 +24,25 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/opensans_medium"
             android:gravity="start"
-            android:text="Tanggal"
+            android:text="Desrikpsi Pemasukan"
             android:textColor="#444"
             android:textSize="14dp" />
 
         <EditText
-            android:id="@+id/dateEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="none"
-            android:onClick="showDatePicker"
-            android:focusable="false"
-            android:cursorVisible="false"
-            android:textColor="@color/black"
-            android:hint="Select Date"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textColor="#444"
-            android:gravity="start"
-            android:textSize="14dp"
-            android:fontFamily="@font/opensans_medium"
-            android:text="Sumber Pemasukan"/>
-
-        <EditText
-            android:background="@drawable/bg_form"
+            android:id="@+id/edt_des"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:padding="10dp"
-            android:fontFamily="@font/opensans_medium"
             android:layout_marginHorizontal="5dp"
-            android:hint="Masukan sumber pemasukan"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_form"
+            android:fontFamily="@font/opensans_medium"
+            android:hint="Masukan deskirpsi pemasukan"
+            android:padding="10dp"
             android:textColor="@color/black"
-            android:textSize="12dp"/>
+            android:textSize="12dp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -81,11 +60,13 @@
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:padding="10dp"
+            android:inputType="number"
             android:fontFamily="@font/opensans_medium"
             android:layout_marginHorizontal="5dp"
             android:hint="Masukan jumlah pemasukan"
             android:textColor="@color/black"
-            android:textSize="12dp"/>
+            android:textSize="12dp"
+            android:id="@+id/edt_jumlah"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -117,6 +98,35 @@
                     android:paddingRight="25dp"
                     android:paddingBottom="10dp"
                     android:text="Submit"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="15dp"
+                app:cardBackgroundColor="@color/red"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/txtDelete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_bold"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="25dp"
+                    android:paddingBottom="10dp"
+                    android:text="Delete"
                     android:textAlignment="center"
                     android:textColor="@color/white" />
             </androidx.cardview.widget.CardView>

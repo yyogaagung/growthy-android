@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.notifications.NotificationsFragment">
+    tools:context=".ui.kebun.KebunFragment">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,6 +17,14 @@
         android:paddingRight="10dp"
         android:paddingBottom="100dp"
         >
+
+<!--        <ProgressBar-->
+<!--            android:id="@+id/progressBar"-->
+<!--            style="?android:attr/progressBarStyle"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:visibility="visible"-->
+<!--            tools:visibility="visible" />-->
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -69,56 +78,6 @@
                 android:textColor="@color/black"
                 android:textSize="24sp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_level"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="10dp"
-                android:layout_below="@id/tv_fullname"
-                android:layout_toEndOf="@id/profile_image"
-                android:text="Premium"
-                android:textSize="12sp"
-                android:fontFamily="@font/opensans_medium"
-                android:textColor="@color/gold"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_poin"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="20dp"
-                android:layout_below="@id/tv_fullname"
-                android:layout_toEndOf="@id/tv_level"
-                android:text="90"
-                android:textSize="12sp"
-                android:fontFamily="@font/opensans_medium"
-                android:textColor="@color/black"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_deskripsi_poin"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="5dp"
-                android:layout_below="@id/tv_fullname"
-                android:layout_toEndOf="@id/tv_poin"
-                android:text="Poin"
-                android:textSize="12sp"
-                android:fontFamily="@font/opensans_medium"
-                android:textColor="@color/black"/>
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile_star"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:layout_centerVertical="true"
-                tools:src="@tools:sample/avatars"
-                android:src="@drawable/stars"
-                android:layout_marginStart="5dp"
-                android:layout_below="@id/tv_fullname"
-                android:layout_toEndOf="@id/tv_deskripsi_poin"/>
-
         </RelativeLayout>
 
         <TextView
@@ -151,6 +110,7 @@
                     android:textSize="14dp" />
 
                 <TextView
+                    android:id="@+id/id_username"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginHorizontal="5dp"
@@ -171,6 +131,7 @@
                     android:textSize="14dp" />
 
                 <TextView
+                    android:id="@+id/id_email"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginHorizontal="5dp"
@@ -186,31 +147,12 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/opensans_medium"
                     android:gravity="start"
-                    android:text="Profesi"
-                    android:textColor="#444"
-                    android:textSize="14dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginHorizontal="5dp"
-                    android:background="@drawable/bg_form"
-                    android:fontFamily="@font/opensans_medium"
-                    android:padding="10dp"
-                    android:textSize="12dp"
-                    tools:text="Progremmer" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/opensans_medium"
-                    android:gravity="start"
                     android:text="Lokasi"
                     android:textColor="#444"
                     android:textSize="14dp" />
 
                 <TextView
+                    android:id="@+id/id_kota"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginHorizontal="5dp"
@@ -231,6 +173,7 @@
                     android:textSize="14dp" />
 
                 <TextView
+                    android:id="@+id/id_telepon"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginHorizontal="5dp"
@@ -250,6 +193,7 @@
             android:paddingTop="10dp">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/btn_logout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
