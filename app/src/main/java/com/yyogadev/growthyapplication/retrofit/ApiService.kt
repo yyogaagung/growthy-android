@@ -1,5 +1,6 @@
 package com.yyogadev.growthyapplication.retrofit
 
+import com.yyogadev.growthyapplication.DiseaseResponse
 import com.yyogadev.growthyapplication.retrofit.response.*
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -80,6 +81,13 @@ interface ApiService {
         @Part("phone") type:RequestBody,
         @Part file: MultipartBody.Part?
     ) : Call<EditFinancialResponse>
+
+    @GET("/disease/diseases")
+    fun getPenyakits(): Call<DiseaseResponse>
+
+    @GET("/disease/diseases/id/{id}")
+    fun getOnePenyakit(@Path("id") id: Int): Call<OneDiseaseResponse>
+
 
 //    @Multipart
 //    @POST("stories")
