@@ -51,8 +51,11 @@ class PlantInfomationActivity : AppCompatActivity() {
     }
 
     private fun startTipsBudidaya() {
-        val intent = Intent(this, CultivationActivity::class.java)
-        startActivity(intent)
+        val moveActivityWithObjectIntent = Intent(this@PlantInfomationActivity, CultivationActivity::class.java)
+        moveActivityWithObjectIntent.putExtra(CultivationActivity.ID,   intent.getIntExtra(
+            ID,0))
+
+        startActivity(moveActivityWithObjectIntent)
     }
 
     companion object {
