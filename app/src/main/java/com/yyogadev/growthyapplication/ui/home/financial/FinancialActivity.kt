@@ -30,7 +30,6 @@ class FinancialActivity : AppCompatActivity(),  View.OnClickListener {
         super.onCreate(savedInstanceState)
         binding = ActivityFinancialBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        checkToken()
 
         val layoutManager = LinearLayoutManager(this)
         binding.rvStories.layoutManager = layoutManager
@@ -46,6 +45,11 @@ class FinancialActivity : AppCompatActivity(),  View.OnClickListener {
             TokenViewModel::class.java
         )
 
+        tokenViewModel.getName().observe(this) { name: String->
+            binding.tvLevel.setText(name.uppercase())
+        }
+
+
 
         tokenViewModel.getToken().observe(this) { token: String->
             if (token.isEmpty()) {
@@ -54,6 +58,7 @@ class FinancialActivity : AppCompatActivity(),  View.OnClickListener {
             }else{
                 transaksiViewModel = ViewModelProvider(this, TransaksiViewModelFactory(token))
                     .get(TransaksiViewModel::class.java)
+
                 transaksiViewModel.isLoading.observe(this) {
                     showLoading(it)
                 }
@@ -118,44 +123,17 @@ class FinancialActivity : AppCompatActivity(),  View.OnClickListener {
         if (v != null) {
             if (v.id == R.id.btn_pemasukan) {
                 val intent = Intent(this, PemasukanAddUpdateActivity::class.java)
-
-                // Add any extra data to the intent if needed
-    //            intent.putExtra("key", "value")
-
-                // Start the second activity
                 startActivity(intent)
             }
             if (v.id == R.id.btn_pengeluaran) {
 
                 val intent = Intent(this, PengeluaranAddUpdateActivity::class.java)
-
-                // Add any extra data to the intent if needed
-                //            intent.putExtra("key", "value")
-
-                // Start the second activity
                 startActivity(intent)
             }
 
         }
     }
 
-    fun checkToken(){
-        val pref = SettingPreferences.getInstance(dataStore)
-
-        tokenViewModel = ViewModelProvider(this, TokenViewModelFactory(pref)).get(
-            TokenViewModel::class.java
-        )
-
-        tokenViewModel.getToken().observe(this) { token: String->
-            if (token.isEmpty()) {
-                val i = Intent(this@FinancialActivity, LoginActivity::class.java)
-                startActivity(i)
-            }else{
-
-
-            }
-        }
-    }
 
     private fun showLoading(isLoading: Boolean) {
         if (isLoading) {

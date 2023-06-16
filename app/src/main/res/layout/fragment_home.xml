@@ -26,12 +26,13 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/welcome_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/opensans_bold"
                     android:text="Hai Yoga Agung"
                     android:textColor="#595959"
-                    android:textSize="20dp"/>
+                    android:textSize="20dp" />
 
 
             </LinearLayout>

@@ -61,6 +61,8 @@ class LoginActivity : AppCompatActivity() {
 
                 if (response.isSuccessful && responseBody != null) {
                     tokenViewModel.saveToken(responseBody.token)
+                    tokenViewModel.saveName(responseBody.name)
+                    Toast.makeText(this@LoginActivity, "Login Berhasil", Toast.LENGTH_SHORT).show()
                     val i = Intent(this@LoginActivity, MainActivity::class.java)
                     startActivity(i)
                     finish();
