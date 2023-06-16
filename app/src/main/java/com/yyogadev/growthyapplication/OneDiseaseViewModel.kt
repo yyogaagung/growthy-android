@@ -23,7 +23,6 @@ class OneDiseaseViewModel (id : Int) : ViewModel() {
         loadOnePenyakit(id)
     }
 
-
     fun loadOnePenyakit(id: Int){
         _isLoading.value = true
         val client = ApiConfig.getApiService().getOnePenyakit(id)

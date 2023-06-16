@@ -13,8 +13,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.yyogadev.growthyapplication.databinding.ActivityDiseaseSeachBinding
 
 class DiseaseSearchActivity : AppCompatActivity() {
-//    private lateinit var rvPenyakit: RecyclerView
-//    private val list = ArrayList<Penyakit>()
     private lateinit var binding: ActivityDiseaseSeachBinding
     private lateinit var penyakitViewModel: PenyakitViewModel
 
@@ -31,10 +29,6 @@ class DiseaseSearchActivity : AppCompatActivity() {
         penyakitViewModel.penyakits.observe(this) {
             items -> setStoriesData(items)
         }
-//        rvPenyakit = findViewById(R.id.rv_penyakit)
-//        rvPenyakit.setHasFixedSize(true)
-//        list.addAll(getListPenyakit())
-//        showRecyclerList()
     }
 
     private fun setStoriesData(diseaseList: List<DiseaseItem>)  {
@@ -49,32 +43,6 @@ class DiseaseSearchActivity : AppCompatActivity() {
             }
         })
     }
-
-//    private fun showRecyclerList() {
-//        rvPenyakit.layoutManager = LinearLayoutManager(this)
-//        val listHewanAdapter = ListPenyakitAdapter(list)
-//        rvPenyakit.adapter = listHewanAdapter
-//        listHewanAdapter.setOnItemClickCallback(object : ListPenyakitAdapter.OnItemClickCallback {
-//            override fun onItemClicked(data: Penyakit) {
-//                val intentToDetail = Intent(this@DiseaseSearchActivity, DiseaseInfoActivity::class.java)
-//                intentToDetail.putExtra("DATA", data)
-//                startActivity(intentToDetail)
-//            }
-//
-//        })
-//    }
-
-//    private fun getListPenyakit(): ArrayList<Penyakit> {
-//        val dataNamaTradisional = resources.getStringArray(R.array.data_nama_tradisional)
-//        val dataNamaLocal = resources.getStringArray(R.array.data_nama_local)
-//        val dataPhoto = resources.obtainTypedArray(R.array.data_photo)
-//        val listPenyakit = ArrayList<Penyakit>()
-//        for (i in dataNamaTradisional.indices) {
-//            val penyakit = Penyakit(dataNamaTradisional[i], dataNamaLocal[i], dataPhoto.getResourceId(i, -1))
-//            listPenyakit.add(penyakit)
-//        }
-//        return listPenyakit
-//    }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater = menuInflater
